@@ -51,8 +51,11 @@ const DropdownCombo = ({
 				{title}
 			</h3>
 			<div className="">
-				{items.map((item, itemIndex) => (
-					<div className="flex w-full flex-col border-b-[1px] border-white text-lg text-white">
+				{items.map((item, itemIndex, index) => (
+					<div
+						key={index}
+						className="flex w-full flex-col border-b-[1px] border-white text-lg text-white"
+					>
 						<div
 							className="flex cursor-pointer items-center justify-between pb-2.5 pt-2.5 "
 							onClick={() => {

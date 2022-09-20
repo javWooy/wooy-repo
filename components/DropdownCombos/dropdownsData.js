@@ -11,12 +11,12 @@ const dropdownsData = [
 							in the world?
 						</p>
 						<p>
-							Taking place quadrennially, the FIFA Men's World
-							CupTM sees 32 nations compete against each other for
-							the prize. With continental qualification pathways
-							leading to an exciting finals event, it brings fans
-							together around the passion and love for the game.
-							The best part? you could be one of them!
+							Taking place quadrennially, the FIFA Men&apos;s
+							World CupTM sees 32 nations compete against each
+							other for the prize. With continental qualification
+							pathways leading to an exciting finals event, it
+							brings fans together around the passion and love for
+							the game. The best part? you could be one of them!
 						</p>
 						<p>
 							On top of this, you will have the opportunity to
@@ -48,7 +48,9 @@ const dropdownsData = [
 							donation or payment is necessary to enter or win
 							this sweepstakes. Only by the stake of your tokens!
 						</p>
-						<p className="font-semibold">We have it all. The only thing missing? You.</p>
+						<p className="font-semibold">
+							We have it all. The only thing missing? You.
+						</p>
 					</div>
 				),
 			},
