@@ -1,0 +1,98 @@
+html,
+body {
+	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+	@apply text-5xl font-semibold tracking-tight text-white;
+}
+
+/* Background image of the orbs in pods */
+
+.bgCircles {
+	background-image: url(../public/Grupo1997.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Background image "Proof of donation" sign in pods */
+
+.bgImage {
+	background-image: url(../public/Grupo233.svg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Background radial */
+
+.bgGradient {
+	background: transparent
+		radial-gradient(
+			ellipse at 100% 100%,
+			#1047e9 0%,
+			#1a337c 20%,
+			#081a4d 30%,
+			#010510 50%,
+			#000000 100%
+		)
+		0% 0% no-repeat padding-box;
+}
+
+#connectButtonStyle div {
+	display: flex;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	@apply rounded-2lg;
+}
+
+#connectButtonStyle div button {
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+	color: black;
+	height: 100%;
+	width: 100%;
+	@apply tracking-tight;
+}
+
+.swiperPrizeCard.swiper {
+	@apply relative;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination {
+	@apply absolute bottom-0 z-10 flex h-10 w-full items-center justify-center;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination .swiper-pagination-bullet {
+	@apply mx-2 h-2 w-2 rounded-full bg-white/50;
+}
+
+.swiperPrizeCard.swiper .swiper-pagination .swiper-pagination-bullet-active {
+	@apply bg-white;
+}
