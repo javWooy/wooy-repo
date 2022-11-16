@@ -101,7 +101,7 @@ const Index = () => {
 						beatiful PODs for you!
 					</p>
 					<div className="font-blue1 mr-10 self-end">
-						<Link href="#">
+						<Link href="https://wooy.gitbook.io/wooy/">
 							<p className="cursor-pointer text-blue1 underline underline-offset-4">
 								Learn more
 							</p>

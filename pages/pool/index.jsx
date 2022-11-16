@@ -11,6 +11,7 @@ import ComboNGO from '../../components/DropdownCombos/ComboNGO'
 import ComboLegal from '../../components/DropdownCombos/ComboLegal'
 import DropdownCombo from '../../components/DropdownCombos/DropdownCombo'
 import dropdownsData from '../../components/DropdownCombos/dropdownsData'
+import BorderWrapper from '../../components/Wrappers/BorderWrapper'
 
 const Index = () => {
 	const prizeData = {
@@ -23,6 +24,7 @@ const Index = () => {
 			'Be part of the positive global impact by helping We forest',
 		],
 		slogan: 'Win this once in a life time experience and be part of the world changing!',
+		endDate: 'July 28, 23 11:00:00 GMT+00:00',
 	}
 
 	return (
@@ -46,13 +48,20 @@ const Index = () => {
 				</div>
 				<div className="flex w-full gap-8 ">
 					<div className="flex w-1/2 flex-col gap-16 ">
-						<div>
+						<BorderWrapper
+							className="mb-[6rem] "
+							rounded="rounded-xl"
+							position="bottom-1.75 right-1.75"
+							contraPosition="top-1.75 left-1.75"
+							borderColor="border-white"
+						>
 							<img
 								src={'/poollarge.png'}
 								className="w-full"
 								alt=""
 							/>
-						</div>
+						</BorderWrapper>
+
 						{dropdownsData.map((item, index) => (
 							<DropdownCombo
 								title={item.title}
@@ -83,18 +92,25 @@ const Index = () => {
 							<p className="mb-4 leading-5 text-white">
 								{prizeData.slogan}
 							</p>
-							<Link href={'/deposit'}>
-								<PressableButton className="h-[2.75rem]">
-									JOIN POOL
-								</PressableButton>
-							</Link>
+
+							{/* <div className="flex h-[21rem] w-full justify-center overflow-hidden bg-white transition-all hover:cursor-pointer hover:shadow-2xl 2xl:h-[24rem]"> */}
+
+							<div className="flex justify-center hover:shadow-2xl ">
+								<div className="flex h-[3rem] w-[20rem] flex-wrap items-center justify-center ">
+									<Link href={'/deposit'}>
+										<PressableButton color="orange">
+											JOIN POOL
+										</PressableButton>
+									</Link>
+								</div>
+							</div>
 						</div>
 
 						<div className="mb-8">
 							<p className="mb-6 text-xl text-white">
 								This pool ends in:
 							</p>
-							<Timer theme="light" />
+							<Timer time={prizeData.endDate} theme="light" />
 						</div>
 
 						<div className="">

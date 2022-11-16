@@ -1,6 +1,9 @@
 import React from 'react'
+import { useCountdown } from '../hooks/useCountdown'
 
 const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
+	const [days, hours, minutes, seconds] = useCountdown(time)
+
 	return (
 		<div
 			className={`flex w-full items-center justify-center gap-2 ${className}`}
@@ -30,20 +33,7 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 								: 'py-0.5 px-2'
 						}`}
 					>
-						0
-					</p>
-					<p
-						className={`rounded ${
-							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
-						} font-bold text-black ${
-							size == 'big'
-								? 'py-1.5 px-3'
-								: size == 'small'
-								? 'py-0.25 px-2 text-lg'
-								: 'py-0.5 px-2'
-						}`}
-					>
-						3
+						{days}
 					</p>
 				</div>
 				<p
@@ -53,7 +43,11 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					}	 ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
+					}	 ${
+						theme == 'dark'
+							? 'text-black'
+							: 'mt-1 !font-semibold text-white/90'
+					} `}
 				>
 					DAY
 				</p>
@@ -86,20 +80,7 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 								: 'py-0.5 px-2'
 						}`}
 					>
-						1
-					</p>
-					<p
-						className={`rounded ${
-							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
-						} font-bold text-black ${
-							size == 'big'
-								? 'py-1.5 px-3'
-								: size == 'small'
-								? 'py-0.25 px-2 text-lg'
-								: 'py-0.5 px-2'
-						}`}
-					>
-						2
+						{hours}
 					</p>
 				</div>
 				<p
@@ -109,7 +90,11 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
+					} ${
+						theme == 'dark'
+							? 'text-black'
+							: 'mt-1 !font-semibold text-white/90'
+					} `}
 				>
 					HR
 				</p>
@@ -142,20 +127,7 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 								: 'py-0.5 px-2'
 						}`}
 					>
-						0
-					</p>
-					<p
-						className={`rounded ${
-							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
-						} font-bold text-black ${
-							size == 'big'
-								? 'py-1.5 px-3'
-								: size == 'small'
-								? 'py-0.25 px-2 text-lg'
-								: 'py-0.5 px-2'
-						}`}
-					>
-						9
+						{minutes}
 					</p>
 				</div>
 				<p
@@ -165,7 +137,11 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
+					} ${
+						theme == 'dark'
+							? 'text-black'
+							: 'mt-1 !font-semibold text-white/90'
+					} `}
 				>
 					MIN
 				</p>
@@ -198,20 +174,7 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 								: 'py-0.5 px-2'
 						}`}
 					>
-						0
-					</p>
-					<p
-						className={`rounded ${
-							theme == 'dark' ? 'bg-black/6.25' : 'bg-white/90'
-						} font-bold text-black ${
-							size == 'big'
-								? 'py-1.5 px-3'
-								: size == 'small'
-								? 'py-0.25 px-2 text-lg'
-								: 'py-0.5 px-2'
-						}`}
-					>
-						4
+						{seconds}
 					</p>
 				</div>
 				<p
@@ -221,7 +184,11 @@ const Timer = ({ time, className, size = 'big', theme = 'dark' }) => {
 							: size == 'small'
 							? 'text-xs font-semibold'
 							: 'text-sm font-bold'
-					} ${theme == 'dark' ? 'text-black' : 'text-white/90 mt-1 !font-semibold'} `}
+					} ${
+						theme == 'dark'
+							? 'text-black'
+							: 'mt-1 !font-semibold text-white/90'
+					} `}
 				>
 					SEC
 				</p>

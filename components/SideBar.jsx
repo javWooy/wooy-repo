@@ -7,9 +7,10 @@ import { SidebarContext } from '../context/sidebarContext'
 import BorderWrapper from './Wrappers/BorderWrapper'
 
 //---icons
-import WavesIcon from '@mui/icons-material/Waves'
-import ColorLensIcon from '@mui/icons-material/ColorLens'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+// import WavesIcon from '@mui/icons-material/Waves'
+// import ColorLensIcon from '@mui/icons-material/ColorLens'
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+//-------
 
 const SideBar = () => {
 	const router = useRouter()
@@ -28,7 +29,14 @@ const SideBar = () => {
 									: 'bg-transparent'
 							}`}
 						>
-							<WavesIcon className="text-inherit" />
+							{/* <WavesIcon className="text-inherit" /> */}
+							<Image
+								width={20}
+								height={20}
+								alt="waves icon"
+								src="/wavesicon.svg"
+							/>
+
 							<p className=" text-2xl text-inherit">Pools</p>
 						</div>
 					</Link>
@@ -40,7 +48,14 @@ const SideBar = () => {
 									: ''
 							}`}
 						>
-							<ColorLensIcon className="text-inherit" />
+							{/* <ColorLensIcon className="text-inherit" /> */}
+							<Image
+								width={20}
+								height={20}
+								alt="colorlensicon icon"
+								src="/colorlensicon.svg"
+							/>
+
 							<p className=" text-2xl text-inherit">NFTs</p>
 						</div>
 					</Link>
@@ -50,7 +65,14 @@ const SideBar = () => {
 								router.pathname == '/account' ? 'bg-blue1' : ''
 							}`}
 						>
-							<AccountCircleIcon className="text-inherit" />
+							{/* <AccountCircleIcon className="text-inherit" /> */}
+							<Image
+								width={20}
+								height={20}
+								alt="accountcircleicon icon"
+								src="/accountcircleicon.svg"
+							/>
+
 							<p className=" text-2xl text-inherit">My Account</p>
 						</div>
 					</Link>
@@ -59,7 +81,15 @@ const SideBar = () => {
 					{helpTooltipOpen && (
 						<>
 							<div className="flex w-full flex-col items-start justify-center gap-0.5 text-sm text-white/80  2xl:text-lg">
-								<button className="flex flex-row gap-1 hover:text-white">
+								<button
+									onClick={() => {
+										window.open(
+											'https://t.me/wearewooy',
+											'_blank'
+										)
+									}}
+									className="flex flex-row gap-1 hover:text-white"
+								>
 									<Image
 										width={20}
 										height={20}
@@ -82,7 +112,15 @@ const SideBar = () => {
 									/>
 									<p>Email support</p>
 								</button>
-								<button className="flex flex-row gap-1 hover:text-white">
+								<button
+									onClick={() => {
+										window.open(
+											'https://wooy.gitbook.io/wooy/',
+											'_blank'
+										)
+									}}
+									className="flex flex-row gap-1 hover:text-white"
+								>
 									<Image
 										width={20}
 										height={20}
@@ -111,7 +149,8 @@ const SideBar = () => {
 						<p className="text-2xl">Help</p>
 					</button>
 
-					<div className="flex w-full justify-between gap-5">
+					{/* <div className="flex w-full justify-between gap-5"> */}
+					<div className="flex gap-5">
 						<BorderWrapper
 							className="text-2xl font-bold text-black"
 							position="bottom-1.25 right-1.25"
@@ -122,7 +161,7 @@ const SideBar = () => {
 								href="https://discord.com/"
 								target="_blank"
 								rel="noreferrer"
-								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
+								className="flex h-[40px] w-[40px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/discord.png"
@@ -132,6 +171,7 @@ const SideBar = () => {
 								/>
 							</a>
 						</BorderWrapper>
+
 						<BorderWrapper
 							className="text-2xl font-bold text-black"
 							position="bottom-1.25 right-1.25"
@@ -142,7 +182,7 @@ const SideBar = () => {
 								href="https://medium.com/"
 								target="_blank"
 								rel="noreferrer"
-								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
+								className="flex h-[40px] w-[40px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/medium.png"
@@ -162,7 +202,7 @@ const SideBar = () => {
 								href="https://twitter.com/"
 								target="_blank"
 								rel="noreferrer"
-								className="flex h-[55px] w-[55px] items-center justify-center bg-white"
+								className="flex h-[40px] w-[40px] items-center justify-center bg-white"
 							>
 								<Image
 									src="/twitter.png"

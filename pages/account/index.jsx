@@ -13,7 +13,7 @@ const pools = [
 		title: 'Experience the World Cup in Qatar',
 		photo: '/pool1.png',
 		isActive: true,
-		enddate: '',
+		enddate: 'July 28, 23 11:00:00 GMT+00:00',
 		isWinner: false,
 	},
 	{
@@ -173,7 +173,7 @@ const Index = () => {
 								<div className="flex flex-col gap-3 bg-blue1 px-8 py-2 tracking-tight text-white">
 									<div className="flex w-full flex-row justify-between">
 										<p>Withdraw amount</p>
-										<p>1,000,000 DAI</p>
+										<p>1,000,000 USDC</p>
 									</div>
 									<div className="flex w-full flex-row items-center">
 										<input
@@ -181,7 +181,7 @@ const Index = () => {
 											className="w-[90%] rounded-lg py-1 px-2 text-black"
 										/>
 										<p className="w-[10%] pl-6 text-center">
-											DAI
+											USDC
 										</p>
 									</div>
 								</div>
@@ -326,6 +326,7 @@ const Index = () => {
 								}}
 								color="blue"
 								className="mt-5 w-[75%]"
+								disabled="true"
 							>
 								<p className="tracking-tight text-white">
 									SHARE POD IMAGE
@@ -456,6 +457,10 @@ const Index = () => {
 							<h3 className="mb-16 text-3xl font-semibold tracking-tight">
 								My collection
 							</h3>
+							<h4 className="mb-10 text-2xl font-semibold tracking-tight">
+								En un futuro van a aparecer tus PODs aca y los
+								vas a poder compartir
+							</h4>
 
 							<div className="grid grid-cols-4 gap-10">
 								{badges.map((badge, index) => {

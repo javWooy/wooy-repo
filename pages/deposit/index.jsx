@@ -41,17 +41,19 @@ const Deposit = () => {
 	})
 
 	const erc20Contract = useContract({
-		addressOrName: controlledTokenAddress,
+		// addressOrName: controlledTokenAddress,
+		addressOrName: tokenAddress,
 		contractInterface: ControlledTokenAbi,
 		signerOrProvider: signer,
 	})
 
 	const [isLoading, setIsLoading] = useState(false)
-	const [txFinished, setTxFinished] = useState(true)
+	const [txFinished, setTxFinished] = useState(false)
 
 	const deposit = async (e) => {
 		const address = await signer.getAddress()
 		const parsedAmount = ethers.utils.parseUnits(amount)
+		console.log('Comienza....')
 		console.log(parsedAmount)
 
 		if (!parsedAmount) return

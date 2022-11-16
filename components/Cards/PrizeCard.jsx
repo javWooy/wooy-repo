@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import { Navigation, Pagination } from 'swiper'
 
+// const TIME_TARGET_MS = new Date('July 28, 23 11:00:00 GMT+00:00')
+
 const SwipeableImages = ({ images }) => {
 	return (
 		// <div className="h-full w-4/12 border-2 border-purple-500">
@@ -46,6 +48,8 @@ const SwipeableImages = ({ images }) => {
 }
 
 const PrizeCard = ({ prizeData }) => {
+	const TIME_TARGET_MS = new Date(prizeData.endDate)
+
 	return (
 		<div className="flex h-[21rem] w-full justify-center overflow-hidden bg-white transition-all hover:cursor-pointer hover:shadow-2xl 2xl:h-[24rem]">
 			<SwipeableImages images={prizeData.images} />
@@ -59,12 +63,18 @@ const PrizeCard = ({ prizeData }) => {
 						{prizeData.company}
 					</p>
 				</div>
-				<Timer className="2xl:mt-4" />
-				<Link href={'/pool'}>
-					<PressableButton color="orange" className="2xl:mt-8">
-						JOIN POOL
-					</PressableButton>
-				</Link>
+
+				<Timer time={TIME_TARGET_MS} className="2xl:mt-4" />
+
+				<div className="flex justify-center">
+					<div className="flex h-[3rem] w-[20rem] flex-wrap items-center justify-center ">
+						<Link href={'/pool'}>
+							<PressableButton color="orange">
+								JOIN POOL
+							</PressableButton>
+						</Link>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
